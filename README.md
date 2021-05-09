@@ -24,37 +24,37 @@ pip install -e phasic-policy-gradient
 
 ## Execute
 
-PPG(single network):
+PPG (single network):
 
 ```
 python -m phasic_policy_gradient.train  --arch detach
 ```
 
-PPG(single network) with functional clipping method:
+PPG (single network) with functional clipping method:
 
 ```
 python -m phasic_policy_gradient.train  --arch detach --clip_method functional
 ```
 
-PPG(single network) with linearly decaying clipping method:
+PPG (single network) with linearly decaying clipping method:
 
 ```
 python -m phasic_policy_gradient.train  --arch detach --clip_method decaying
 ```
 
-PPG(single network, 4 workers):
+PPG (single network, 4 workers):
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train  --arch detach
 ```
 
-PPG(single network, 4 workers) with functional clipping method:
+PPG (single network, 4 workers) with functional clipping method:
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train  --arch detach --clip_method functional
 ```
 
-PPG(single network, 4 workers) with linearly decaying clipping method:
+PPG (single network, 4 workers) with linearly decaying clipping method:
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train  --arch detach --clip_method decaying
@@ -78,19 +78,19 @@ PPO with linearly decaying clipping method:
 python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --num_envs 128 --arch shared --clip_method decaying
 ```
 
-PPO(4 workers):
+PPO (4 workers):
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared
 ```
 
-PPO(4 workers) with functional clipping method:
+PPO (4 workers) with functional clipping method:
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared --clip_method functional
 ```
 
-PPO(4 workers) with linearly decaying clipping method:
+PPO (4 workers) with linearly decaying clipping method:
 
 ```
 mpiexec -np 4 python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared --clip_method decaying
