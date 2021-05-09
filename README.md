@@ -63,19 +63,19 @@ mpiexec -np 4 python -m phasic_policy_gradient.train  --arch detach --clip_metho
 PPO:
 
 ```
-python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --num_envs 128 --arch shared
+python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared
 ```
 
 PPO with functional clipping method:
 
 ```
-python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --num_envs 128 --arch shared --clip_method functional
+python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared --clip_method functional
 ```
 
 PPO with linearly decaying clipping method:
 
 ```
-python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --num_envs 128 --arch shared --clip_method decaying
+python -m phasic_policy_gradient.train --n_epoch_pi 3 --n_epoch_vf 3 --n_aux_epochs 0 --arch shared --clip_method decaying
 ```
 
 PPO (4 workers):
