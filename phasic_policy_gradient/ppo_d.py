@@ -1,5 +1,6 @@
 """
 Mostly copied from ppo.py but with some extra options added that are relevant to phasic
+and some extra modifications made that are relevant to linearly decaying clipping
 """
 
 import numpy as np
@@ -92,7 +93,8 @@ def compute_losses(
     # prob ratio for KL / clipping based on a (possibly) recomputed logp
     logratio = newlogp - logp
     ratio = th.exp(logratio)
-
+      
+    #linearly decaying clipping
     if clip_param > 0:
         learn_state = learn_state or {}
         curr_interact_count = learn_state.get("curr_interact_count") or 0
