@@ -1,5 +1,6 @@
 """
 Mostly copied from ppo.py but with some extra options added that are relevant to phasic
+and some extra modifications made that are relevant to functional clipping
 """
 
 import numpy as np
@@ -91,9 +92,12 @@ def compute_losses(
     logratio = newlogp - logp
     ratio = th.exp(logratio)
 
+    #functional clipping
     if clip_param > 0:
         pg_losses = -adv * ratio
         ratio_smoothed = ratio.detach().clone()
+
+        #hyperparameter alpha
         alpha = 0.3
         for row in ratio_smoothed:
             for e in row:
