@@ -11,6 +11,12 @@ Supported Pythons:
 
 - 3.7 64-bit
 
+## Code Structure
+
+[`environment.yml`](environment.yml) and [`setup.py`](setup.py) is for installing the dependencies.
+
+Code for implementing Phasic Policy Gradient is in the folder phasic_policy_gradient, where ppo.py uses original clipping, ppo_s.py uses the functional clipping, and ppo_d.py uses the linearly decaying clipping.
+
 ## Install
 
 You can get miniconda from https://docs.conda.io/en/latest/miniconda.html if you don't have it, or install the dependencies from [`environment.yml`](environment.yml) manually.
