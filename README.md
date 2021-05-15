@@ -25,7 +25,7 @@ You can get miniconda from https://docs.conda.io/en/latest/miniconda.html if you
 git clone https://github.com/SiliGuo/Final_Project_PPG.git
 conda env update --name phasic-policy-gradient --file Final_Project_PPG/environment.yml
 conda activate phasic-policy-gradient
-pip install -e phasic-policy-gradient
+pip install -e Final_Project_PPG
 ```
 
 ## Execute
